@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Havoc Fit Studio | Comece Hoje Sua Jornada Fitness em São Paulo</title>
+<!-- Fontes do Google: Anton (estilo Impact) e Inter (moderna e legível) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Ícones Phosphor Icons -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<!-- Tailwind CSS v3 com plugins necessários -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              terracotta: '#D95D37',
+              terracottaDark: '#be4e2d',
+              cream: '#FDF8EA',
+              creamLight: '#FEFBF3',
+              dark: '#262525',
+              darker: '#1E1E1E',
+              darkCard: '#181818'
+            }
+          },
+          fontFamily: {
+            impact: ['Anton', 'Impact', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Estilos customizados e utilitários visuais -->
+<style data-purpose="custom-typography-and-effects">
+    .text-stroke {
+      -webkit-text-stroke: 1.5px rgba(217, 93, 55, 0.4);
+      color: transparent;
+    }
+    .text-stroke-white {
+      -webkit-text-stroke: 1.5px rgba(253, 248, 234, 0.25);
+      color: transparent;
+    }
+    .badge-slant {
+      transform: rotate(-3deg);
+    }
+    .card-slant-left {
+      transform: rotate(-2deg);
+    }
+    .card-slant-right {
+      transform: rotate(2deg);
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans selection:bg-brand-terracotta selection:text-white antialiased overflow-x-hidden">
+<!-- BEGIN: TopNotificationBar -->
+<div class="bg-brand-darker text-brand-cream text-xs font-semibold py-2 px-4 text-center flex items-center justify-center gap-3 border-b border-neutral-800">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-terracotta text-white text-[11px] font-bold uppercase tracking-wider">Novo Aluno</span>
+<span>Agende sua aula experimental gratuita sem compromisso esta semana!</span>
+<a class="underline font-bold hover:text-brand-terracotta transition ml-1 inline-flex items-center gap-1" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20minha%20aula%20experimental%20na%20Havoc%20Fit." target="_blank">
+      Chamar no WhatsApp <i class="ph ph-arrow-right"></i>
+</a>
+</div>
+<!-- END: TopNotificationBar -->
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-brand-cream border-b border-brand-dark/10 sticky top-0 z-50 transition-all backdrop-blur-md bg-opacity-95">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logotipo Havoc Fit -->
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-brand-terracotta text-white flex items-center justify-center shadow-lg shadow-brand-terracotta/30 group-hover:scale-105 transition-transform">
+<i class="ph-bold ph-barbell text-2xl"></i>
+</div>
+<div class="flex flex-col">
+<span class="font-impact text-2xl tracking-wider text-brand-dark leading-none">HAVOC<span class="text-brand-terracotta">FIT</span></span>
+<span class="text-[10px] font-bold tracking-widest text-brand-terracotta uppercase">Studio Treino &amp; Saúde</span>
+</div>
+</a>
+<!-- Menu de Navegação Desktop -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-bold text-brand-dark hover:text-brand-terracotta transition relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-terracotta" href="#inicio">Início</a>
+<a class="text-sm font-bold text-neutral-600 hover:text-brand-terracotta transition" href="#diferenciais">O Modelo Studio</a>
+<a class="text-sm font-bold text-neutral-600 hover:text-brand-terracotta transition" href="#planos">Planos</a>
+<a class="text-sm font-bold text-neutral-600 hover:text-brand-terracotta transition" href="#depoimentos">Avaliações Google</a>
+<a class="text-sm font-bold text-neutral-600 hover:text-brand-terracotta transition" href="#localizacao">Como Chegar</a>
+</nav>
+<!-- Botão de Ação CTA Superior -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-2 bg-brand-terracotta hover:bg-brand-terracottaDark text-white font-bold text-sm px-6 py-3 rounded-full shadow-md shadow-brand-terracotta/25 transition transform active:scale-95" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Havoc%20Fit%20e%20quero%20agendar%20minha%20visita." target="_blank">
+<i class="ph-bold ph-whatsapp-logo text-lg"></i>
+<span>Agendar Aula Grátis</span>
+</a>
+<a class="p-3 text-brand-dark hover:text-brand-terracotta md:hidden" href="tel:11958843199">
+<i class="ph-bold ph-phone-call text-2xl"></i>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden pt-8 pb-16 lg:py-16" id="inicio">
+<!-- Efeito de tipografia de fundo em marca d'água -->
+<div class="absolute -left-12 top-1/4 pointer-events-none select-none z-0 hidden lg:block opacity-40">
+<span class="font-impact text-[140px] text-stroke tracking-widest leading-none block -rotate-90 origin-bottom-left">
+        HAVOC
+      </span>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Coluna Esquerda: Conteúdo Textual & Prova Social -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Selo / Badge Superior -->
+<div class="inline-flex items-center gap-2 bg-brand-terracotta/10 border border-brand-terracotta/20 rounded-full px-4 py-1.5 badge-slant">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-terracotta animate-pulse"></span>
+<span class="font-impact text-xs uppercase tracking-widest text-brand-terracotta">STUDIO FITNESS EXCLUSIVO • SÃO PAULO</span>
+</div>
+<!-- Headline Principal com Anton/Impact -->
+<h1 class="font-impact text-5xl sm:text-6xl lg:text-7xl text-brand-dark tracking-tight leading-[1.02] uppercase">
+            COMECE HOJE SUA <br/>
+<span class="text-brand-terracotta underline decoration-brand-dark/20 underline-offset-8">JORNADA FITNESS</span>
+</h1>
+<!-- Descrição com a proposta de valor do Studio Havoc Fit -->
+<p class="text-neutral-700 text-lg sm:text-xl font-medium max-w-xl leading-relaxed">
+            Mais que uma academia convencional com aparelhos lotados: somos um <strong class="text-brand-dark font-semibold">studio com acompanhamento próximo</strong> dos professores, ambiente acolhedor e foco real na sua evolução diária.
+          </p>
+<!-- CTAs Primário e Secundário -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-3 bg-brand-dark hover:bg-neutral-900 text-brand-cream font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-dark/20 transition transform hover:-translate-y-0.5" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Quero%20dar%20o%20primeiro%20passo%20e%20fazer%20uma%20aula%20experimental%20no%20Studio." target="_blank">
+<span>Agendar Minha Visita</span>
+<i class="ph-bold ph-arrow-up-right text-lg"></i>
+</a>
+<a class="inline-flex items-center gap-2.5 bg-brand-creamLight hover:bg-white text-brand-dark border-2 border-brand-dark/15 font-bold px-6 py-3.5 rounded-xl transition shadow-sm" href="#diferenciais">
+<span class="w-8 h-8 rounded-full bg-brand-terracotta text-white flex items-center justify-center text-xs">
+<i class="ph-bold ph-play"></i>
+</span>
+<span>Conhecer o Studio</span>
+</a>
+</div>
+<!-- Trinca de Destaques Estilizada (baseada na composição da referência) -->
+<div class="grid grid-cols-3 gap-3 pt-4 max-w-lg">
+<div class="bg-brand-dark text-brand-cream p-3.5 rounded-xl text-center shadow-md transform -rotate-1 hover:rotate-0 transition">
+<span class="font-impact text-2xl sm:text-3xl text-brand-terracotta block">4.7 ★</span>
+<span class="text-xs text-neutral-300 font-semibold block leading-tight">Google Maps (+84 avaliações)</span>
+</div>
+<div class="bg-brand-terracotta text-white p-3.5 rounded-xl text-center shadow-md transform rotate-1 hover:rotate-0 transition">
+<span class="font-impact text-2xl sm:text-3xl block leading-tight">100%</span>
+<span class="text-xs text-white/90 font-semibold block leading-tight">Apoio postural contínuo</span>
+</div>
+<div class="bg-brand-dark text-brand-cream p-3.5 rounded-xl text-center shadow-md transform -rotate-1 hover:rotate-0 transition">
+<span class="font-impact text-2xl sm:text-3xl text-amber-300 block">ZERO</span>
+<span class="text-xs text-neutral-300 font-semibold block leading-tight">Fila em aparelhos</span>
+</div>
+</div>
+<!-- Social Proof: Mini Avatares e Nota do Google -->
+<div class="flex items-center gap-4 pt-2">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Aluna Studio Havoc Fit" class="inline-block h-11 w-11 rounded-full ring-2 ring-brand-cream object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjVQETEpXBGBlsdlnN0fOeMPFZ9GBfGX4LzComJhxcP936v9uOZYM-l0qJR-PLZQD-1AuFKaVsxvpJu8NoKFLy9cfFJv_Y5Az4r6DXcBzpIotZzdJV8UOzRC-iz3hwCGviAUfabT9JYIXvyJQgKflR5ZdO2gZiPuwtrZicF-cz8TDaqCYCsB4kWq_47ynQXGCpjxeOGFgkoTbd0_QxGQk7lUD724IGMRH9UyQ3kK3RrX9PXvE5ntx7"/>
+<img alt="Aluno Studio Havoc Fit" class="inline-block h-11 w-11 rounded-full ring-2 ring-brand-cream object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz4_AGHywcPjYk1wr4-n4B5MtFhTFAQuhG-6RpglgrX6LPyC2N-D5CVkCeHF3RH43vdEUohkLwTrwCGeamXdukSbzRbZp7Lb_8iNjGAsMAGwTbxM5umGLMpr8bnEwP2VTlmRkcUL8MjPQ6bPo2Z4rcz8QEhVJs5HfpePyPkxrwHRrCO0HKCUqK9Y-cKsflPDPZ1OPQDPHDwjP5M3oaW0MxcHvk2zdtzKPpX3Z2vd7Cb73umekcK2PA"/>
+<img alt="Aluna Havoc Fit" class="inline-block h-11 w-11 rounded-full ring-2 ring-brand-cream object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgU9xz_jIMdU9Amen2LAjq3ej-dtnz2tJBIl55j0gBpA2V8Rgdegv2uFLkDdDhS-gJK79jStjIlUJChOsyx-UpNuKAzVMOEEWYrZx3hffQ-1eErzdRXi56GjyqQj0VVpItKYnBJTTXLGfPygja15FsCQNUlPxhhmnT5HE46uIaYmQrxD_iERYAy5v99DAG5lQm-Hf_TakX2UiTFvJfLxvormGl8nJWk2MMxN1073nw2wuc06aYRKZc"/>
+<div class="inline-flex h-11 w-11 rounded-full ring-2 ring-brand-cream bg-brand-terracotta text-white text-xs font-bold items-center justify-center">
+                +84
+              </div>
+</div>
+<div>
+<div class="flex items-center text-amber-500 text-sm">
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star-half"></i>
+<span class="ml-2 font-bold text-brand-dark text-xs sm:text-sm">4.7 de 5 estrelas</span>
+</div>
+<p class="text-xs text-neutral-600 font-medium">Reconhecido pela simpatia dos professores e ambiente motivador</p>
+</div>
+</div>
+</div>
+<!-- Coluna Direita: Bloco Assimétrico Escuro / Terracota (Inspirado nas Referências 1 & 2) -->
+<div class="lg:col-span-5 relative mt-6 lg:mt-0">
+<!-- Bloco Escuro de Fundo Estilo Poster da Imagem 1 -->
+<div class="relative bg-brand-darker rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-neutral-800 text-brand-cream overflow-hidden">
+<!-- Fundo Terracota Curvado / Pill Shape da Imagem de Referência -->
+<div class="absolute -right-8 -top-8 w-64 h-64 bg-brand-terracotta rounded-full blur-2xl opacity-20 pointer-events-none"></div>
+<div class="absolute top-10 right-6 w-48 h-64 bg-brand-terracotta rounded-[3rem] -rotate-12 opacity-85 z-0 hidden sm:block"></div>
+<!-- Estrelas e Ícones Decorativos da Referência -->
+<div class="absolute top-6 left-6 text-brand-terracotta text-xl flex gap-1 z-10">
+<i class="ph-fill ph-sparkle"></i>
+<i class="ph-fill ph-sparkle text-sm text-brand-cream/60"></i>
+</div>
+<!-- Imagem do Atleta / Treino em Studio -->
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-xl aspect-[4/5] bg-neutral-900 border border-white/10 group">
+<img alt="Treino com pesos livres e acompanhamento Havoc Fit" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8rLTfOxGZeawbQvCuctT5MeU2SY-ulAMbjZjw9GlZYavrrMbnNF5wCa5QDzU-r9v4Dzm3xnNO0G0mmFr4MsT3imaqiuKzGXX8CsMRJi1bHFr0Tj94mc9VRjkmc3rrC7Ca2E4h8oUgUTzTAh2jtluuKnOI-YdwepqjJJfrJMmNIXuvsLMG-_b8sxwsjfHeSjdlphR3-wb3xWKmfRx9U9hSVBoXitGrKksjWNJf1Ns1g2MVrAS9N3ev"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-transparent opacity-80"></div>
+<!-- Badge Flutuante de Treino -->
+<div class="absolute bottom-4 left-4 right-4 bg-brand-darker/90 backdrop-blur-md p-3.5 rounded-xl border border-white/15 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center font-bold">
+<i class="ph-bold ph-barbell text-xl"></i>
+</div>
+<div>
+<span class="text-xs uppercase tracking-wider text-neutral-400 block font-semibold">Foco em Halteres &amp; Pesos</span>
+<span class="text-sm font-bold text-white">Treino Livre Orientado</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-brand-terracotta font-impact text-lg">SUPERVISÃO</span>
+<span class="text-[10px] text-neutral-400 block">Postura Correta</span>
+</div>
+</div>
+</div>
+<!-- Mini Cartão Superior Sobreposto (estilo dashboard da ref 1) -->
+<div class="mt-4 bg-neutral-900/90 border border-neutral-800 rounded-2xl p-4 flex items-center justify-between z-10 relative">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-terracotta flex items-center justify-center text-white">
+<i class="ph-bold ph-heartbeat text-xl"></i>
+</div>
+<div>
+<div class="text-xs text-neutral-400">Ambiente Inclusivo</div>
+<div class="text-sm font-bold text-brand-cream">Respeito &amp; Liberdade LGBTQ+</div>
+</div>
+</div>
+<span class="text-xs px-2.5 py-1 rounded bg-brand-terracotta/20 text-brand-terracotta font-bold border border-brand-terracotta/30">100% Seguro</span>
+</div>
+<!-- Redes Sociais no Bloco Preto (como visto na lateral da ref 1) -->
+<div class="flex items-center justify-between pt-4 text-neutral-400 text-xs border-t border-neutral-800 mt-4">
+<span>Americanópolis • SP</span>
+<div class="flex items-center gap-3 text-lg">
+<a class="hover:text-brand-terracotta transition" href="https://wa.me/5511958843199" target="_blank" title="WhatsApp"><i class="ph-bold ph-whatsapp-logo"></i></a>
+<a class="hover:text-brand-terracotta transition" href="#localizacao" title="Localização"><i class="ph-bold ph-map-pin"></i></a>
+<a class="hover:text-brand-terracotta transition" href="tel:11958843199" title="Ligue para nós"><i class="ph-bold ph-phone"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: StudioAdvantageSection -->
+<section class="py-20 bg-brand-dark text-brand-cream relative" id="diferenciais">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Cabeçalho da Seção -->
+<div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+<div class="inline-flex items-center gap-2 bg-brand-terracotta/20 border border-brand-terracotta/40 rounded-full px-4 py-1">
+<i class="ph ph-lightning text-brand-terracotta"></i>
+<span class="text-xs uppercase font-impact tracking-widest text-brand-terracotta">POR QUE ESCOLHER A HAVOC FIT</span>
+</div>
+<h2 class="font-impact text-4xl sm:text-5xl uppercase tracking-tight">
+          O FORMATO STUDIO FEITO PARA QUEM QUER <span class="text-brand-terracotta">RESULTADO REAL</span>
+</h2>
+<p class="text-neutral-400 text-base sm:text-lg">
+          Diferente das academias de rede onde você é só mais um número e fica abandonado com uma ficha impressa, no Studio Havoc Fit você tem apoio humano e próximo todos os dias.
+        </p>
+</div>
+<!-- Grid dos 3 Pilares -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Atendimento Próximo -->
+<div class="bg-brand-darkCard rounded-3xl p-8 border border-neutral-800 hover:border-brand-terracotta/50 transition duration-300 relative group flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-terracotta group-hover:text-white transition duration-300">
+<i class="ph-bold ph-users-three"></i>
+</div>
+<h3 class="font-impact text-2xl tracking-wide uppercase mb-3 text-white">Treinadores que Te Conhecem pelo Nome</h3>
+<p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              Nosso ambiente menor é uma vantagem deliberada: nossos professores corrigem sua postura, ajustam as cargas e incentivam você em cada repetição para evitar lesões.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-800/80 flex items-center gap-2 text-brand-terracotta text-xs font-bold uppercase tracking-wider">
+<i class="ph-bold ph-check-circle"></i> Acompanhamento Próximo
+          </div>
+</div>
+<!-- Card 2: Espaço Inclusivo & Seguro -->
+<div class="bg-brand-darkCard rounded-3xl p-8 border-2 border-brand-terracotta relative group flex flex-col justify-between shadow-xl shadow-brand-terracotta/10">
+<div class="absolute -top-3.5 right-6 bg-brand-terracotta text-white font-impact text-xs uppercase px-3 py-1 rounded-full tracking-wider">
+            DIFERENCIAL HUMANO
+          </div>
+<div>
+<div class="w-14 h-14 rounded-2xl bg-brand-terracotta text-white flex items-center justify-center text-3xl mb-6">
+<i class="ph-bold ph-rainbow"></i>
+</div>
+<h3 class="font-impact text-2xl tracking-wide uppercase mb-3 text-white">Espaço Inclusivo &amp; Seguro LGBTQ+</h3>
+<p class="text-neutral-300 text-sm leading-relaxed mb-6">
+              Apoiamos e acolhemos com orgulho a diversidade. Um ambiente livre de julgamentos, onde qualquer pessoa se sente respeitada, confiante e confortável para treinar com foco total.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-800/80 flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider">
+<i class="ph-bold ph-shield-check text-brand-terracotta text-base"></i> Respeito e Bem-Estar Garantidos
+          </div>
+</div>
+<!-- Card 3: Treino Sem Filas -->
+<div class="bg-brand-darkCard rounded-3xl p-8 border border-neutral-800 hover:border-brand-terracotta/50 transition duration-300 relative group flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center text-3xl mb-6 group-hover:bg-brand-terracotta group-hover:text-white transition duration-300">
+<i class="ph-bold ph-timer"></i>
+</div>
+<h3 class="font-impact text-2xl tracking-wide uppercase mb-3 text-white">Sem Perda de Tempo com Filas</h3>
+<p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              Chega de revezar 5 pessoas no mesmo aparelho. Nossa estrutura é dimensionada para fluidez: pesos livres, puxadores, remadas e funcional com disponibilidade imediata.
+            </p>
+</div>
+<div class="pt-4 border-t border-neutral-800/80 flex items-center gap-2 text-brand-terracotta text-xs font-bold uppercase tracking-wider">
+<i class="ph-bold ph-check-circle"></i> Treino Ágil em 50 minutos
+          </div>
+</div>
+</div>
+<!-- Banner de Resposta do Gestor da Havoc Fit -->
+<div class="mt-12 bg-neutral-900 rounded-2xl p-6 sm:p-8 border border-neutral-800 flex flex-col md:flex-row items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-brand-terracotta/20 text-brand-terracotta flex-shrink-0 flex items-center justify-center text-3xl">
+<i class="ph-fill ph-chat-centered-text"></i>
+</div>
+<div class="space-y-1">
+<span class="text-brand-terracotta font-impact text-xs uppercase tracking-widest">Compromisso Havoc Fit:</span>
+<p class="text-brand-cream text-base italic leading-relaxed">
+            "Nossa academia visa um atendimento no modelo Studio: onde o espaço menor e intimista é nossa maior vantagem para oferecer atenção personalizada, acolhimento e resultados consistentes para cada aluno."
+          </p>
+<span class="text-xs text-neutral-400 block pt-1 font-semibold">— Equipe Havoc Fit Studio, Americanópolis</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: StudioAdvantageSection -->
+<!-- BEGIN: PricingSection -->
+<section class="py-20 bg-brand-cream relative" id="planos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="font-impact text-brand-terracotta text-xs uppercase tracking-widest">TRANSPARÊNCIA E VALOR REAL</span>
+<h2 class="font-impact text-4xl sm:text-5xl text-brand-dark tracking-tight uppercase">
+          PLANOS PARA SEU <span class="text-brand-terracotta">RITMO DE VIDA</span>
+</h2>
+<p class="text-neutral-600 text-sm sm:text-base">
+          Sem taxas ocultas, sem pegadinhas. Escolha a melhor opção para transformar sua rotina com suporte contínuo.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- Plano 1: Mensal Livre -->
+<div class="bg-brand-creamLight rounded-3xl p-8 border border-brand-dark/10 shadow-lg flex flex-col justify-between hover:shadow-xl transition">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-neutral-500">Flexibilidade</span>
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-neutral-200 text-neutral-700">Sem Fidelidade</span>
+</div>
+<h3 class="font-impact text-2xl uppercase text-brand-dark mb-2">Mensal Studio</h3>
+<p class="text-neutral-600 text-sm mb-6">Ideal para quem quer experimentar a dinâmica do studio sem compromisso a longo prazo.</p>
+<div class="mb-6 pb-6 border-b border-neutral-200">
+<span class="text-neutral-500 text-xs uppercase block font-semibold">A partir de</span>
+<div class="flex items-baseline gap-1">
+<span class="text-sm font-bold text-brand-dark">R$</span>
+<span class="font-impact text-4xl text-brand-dark">119</span>
+<span class="text-xs text-neutral-500">/mês</span>
+</div>
+</div>
+<ul class="space-y-3 text-sm text-neutral-700 mb-8">
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta"></i> Acesso total ao espaço de musculação e pesos livres
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta"></i> Orientação contínua de professores no salão
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta"></i> Sem taxa de cancelamento
+              </li>
+<li class="flex items-center gap-2.5 text-neutral-400">
+<i class="ph ph-x"></i> Avaliação física periódica inclusa
+              </li>
+</ul>
+</div>
+<a class="w-full py-3.5 px-4 rounded-xl border-2 border-brand-dark text-brand-dark font-bold text-center text-sm hover:bg-brand-dark hover:text-white transition" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20Mensal%20Studio." target="_blank">
+            Contratar Mensal
+          </a>
+</div>
+<!-- Plano 2: Mais Escolhido (Trimestral/Semestral Studio) -->
+<div class="bg-brand-darker text-brand-cream rounded-3xl p-8 border-2 border-brand-terracotta shadow-2xl relative flex flex-col justify-between transform lg:-translate-y-2">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-terracotta text-white font-impact text-xs uppercase px-4 py-1 rounded-full tracking-wider shadow-md">
+            ★ MAIS RECOMENDADO
+          </div>
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-terracotta">Consistência e Foco</span>
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-terracotta/20 text-brand-terracotta border border-brand-terracotta/40">Melhor Custo-Benefício</span>
+</div>
+<h3 class="font-impact text-3xl uppercase text-white mb-2">Trimestral Studio</h3>
+<p class="text-neutral-300 text-sm mb-6">O tempo certo para consolidar hábitos, queimar gordura e ganhar massa muscular com suporte.</p>
+<div class="mb-6 pb-6 border-b border-neutral-800">
+<span class="text-neutral-400 text-xs uppercase block font-semibold">Apenas</span>
+<div class="flex items-baseline gap-1">
+<span class="text-sm font-bold text-white">R$</span>
+<span class="font-impact text-5xl text-brand-terracotta">89</span>
+<span class="text-xs text-neutral-400">/mês equiv.</span>
+</div>
+<span class="text-[11px] text-neutral-400">Plano trimestral parcelado sem travar limite alto</span>
+</div>
+<ul class="space-y-3.5 text-sm text-neutral-300 mb-8">
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta text-base"></i> Treino individualizado montado para você
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta text-base"></i> Avaliação física completa e medições
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta text-base"></i> Ajustes quinzenais de carga e exercícios
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta text-base"></i> Suporte de dúvidas via WhatsApp do Studio
+              </li>
+</ul>
+</div>
+<a class="w-full py-4 px-4 rounded-xl bg-brand-terracotta hover:bg-brand-terracottaDark text-white font-bold text-center text-sm shadow-lg shadow-brand-terracotta/30 transition transform hover:scale-[1.02]" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Plano%20Trimestral%20Studio." target="_blank">
+            Garantir Esta Condição
+          </a>
+</div>
+<!-- Plano 3: Personal & VIP -->
+<div class="bg-brand-creamLight rounded-3xl p-8 border border-brand-dark/10 shadow-lg flex flex-col justify-between hover:shadow-xl transition">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-neutral-500">Exclusividade Máxima</span>
+<span class="text-xs font-semibold px-2.5 py-1 rounded bg-neutral-200 text-neutral-700">Vagas Limitadas</span>
+</div>
+<h3 class="font-impact text-2xl uppercase text-brand-dark mb-2">Personal Studio</h3>
+<p class="text-neutral-600 text-sm mb-6">Para quem busca acompanhamento exclusivo 1 a 1 para atingir metas desafiadoras.</p>
+<div class="mb-6 pb-6 border-b border-neutral-200">
+<span class="text-neutral-500 text-xs uppercase block font-semibold">Consulte horários</span>
+<div class="flex items-baseline gap-1">
+<span class="font-impact text-3xl text-brand-dark">Sob Consulta</span>
+</div>
+<span class="text-[11px] text-neutral-500">Pacotes mensais e bissemanais personalizados</span>
+</div>
+<ul class="space-y-3 text-sm text-neutral-700 mb-8">
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta"></i> Professor dedicado durante 100% da sua sessão
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta"></i> Planejamento para hipertrofia, emagrecimento ou reabilitação
+              </li>
+<li class="flex items-center gap-2.5">
+<i class="ph-bold ph-check text-brand-terracotta"></i> Flexibilidade de agendamento prioritário
+              </li>
+</ul>
+</div>
+<a class="w-full py-3.5 px-4 rounded-xl border-2 border-brand-dark text-brand-dark font-bold text-center text-sm hover:bg-brand-dark hover:text-white transition" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20para%20Personal%20Studio." target="_blank">
+            Consultar Disponibilidade
+          </a>
+</div>
+</div>
+<div class="mt-8 text-center text-xs text-neutral-500 font-medium">
+        *Valores e promoções vigentes sujeitos a alteração sem aviso prévio. Consulte formas de pagamento no balcão (PIX, Cartões e Boleto).
+      </div>
+</div>
+</section>
+<!-- END: PricingSection -->
+<!-- BEGIN: TestimonialsSection -->
+<section class="py-20 bg-brand-dark text-brand-cream relative overflow-hidden" id="depoimentos">
+<!-- Marca d'água de fundo -->
+<div class="absolute right-0 bottom-0 text-stroke-white text-[160px] font-impact leading-none select-none pointer-events-none opacity-20">
+      HAVOC
+    </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Cabeçalho -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="inline-flex items-center gap-1.5 text-brand-terracotta font-impact text-xs tracking-widest uppercase mb-2">
+<i class="ph-fill ph-google-logo text-base"></i> AVALIAÇÕES REAIS NO GOOGLE MAPS
+          </div>
+<h2 class="font-impact text-4xl sm:text-5xl uppercase tracking-tight">
+            QUEM TREINA AQUI, <span class="text-brand-terracotta">RECOMENDA</span>
+</h2>
+</div>
+<div class="flex items-center gap-3 bg-brand-darkCard px-5 py-3 rounded-2xl border border-neutral-800">
+<div class="text-3xl font-impact text-amber-400">4.7</div>
+<div class="text-xs">
+<div class="flex text-amber-400">
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star-half"></i>
+</div>
+<span class="text-neutral-400 font-semibold">+84 opiniões verificadas</span>
+</div>
+</div>
+</div>
+<!-- Depoimentos Reais dos Usuários Havoc Fit -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Depoimento 1: Amanda -->
+<div class="bg-brand-darkCard p-7 rounded-3xl border border-neutral-800 flex flex-col justify-between hover:border-brand-terracotta/40 transition">
+<div class="space-y-4">
+<div class="flex items-center text-amber-400 text-sm">
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+</div>
+<p class="text-neutral-300 text-sm sm:text-base leading-relaxed italic">
+              "Ambiente top, equipamentos de qualidade e atendimento excelente! Me sinto motivada a treinar todos os dias 💪🔥"
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-neutral-800/80 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-terracotta text-white font-bold flex items-center justify-center text-sm">
+              A
+            </div>
+<div>
+<span class="text-sm font-bold text-white block">Amanda</span>
+<span class="text-xs text-neutral-500">Aluna Havoc Fit • Google Review</span>
+</div>
+</div>
+</div>
+<!-- Depoimento 2: Camila Aparecida -->
+<div class="bg-brand-darkCard p-7 rounded-3xl border border-neutral-800 flex flex-col justify-between hover:border-brand-terracotta/40 transition">
+<div class="space-y-4">
+<div class="flex items-center text-amber-400 text-sm">
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+</div>
+<p class="text-neutral-300 text-sm sm:text-base leading-relaxed italic">
+              "Um ótimo ambiente pra se treinar, professores super simpáticos e atenciosos! A gente não fica perdida no treino."
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-neutral-800/80 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-neutral-700 text-white font-bold flex items-center justify-center text-sm">
+              CA
+            </div>
+<div>
+<span class="text-sm font-bold text-white block">Camila Aparecida</span>
+<span class="text-xs text-neutral-500">Aluna Havoc Fit • Google Review</span>
+</div>
+</div>
+</div>
+<!-- Depoimento 3: Emerson com Resposta do Studio -->
+<div class="bg-brand-darkCard p-7 rounded-3xl border border-neutral-800 flex flex-col justify-between hover:border-brand-terracotta/40 transition">
+<div class="space-y-4">
+<div class="flex items-center text-amber-400 text-sm">
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+<i class="ph-fill ph-star"></i>
+</div>
+<p class="text-neutral-300 text-sm sm:text-base leading-relaxed italic">
+              "Academia compacta com atmosfera agradável e sem confusão de grandes redes. Professor sempre de olho na postura."
+            </p>
+<div class="bg-neutral-900 p-3 rounded-xl border-l-2 border-brand-terracotta text-xs text-neutral-400">
+<strong class="text-brand-terracotta font-semibold block mb-0.5">Resposta do Studio:</strong>
+              Nosso objetivo é exatamente esse formato Studio: estar perto de cada aluno!
+            </div>
+</div>
+<div class="pt-6 mt-6 border-t border-neutral-800/80 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-terracotta/30 text-brand-terracotta font-bold flex items-center justify-center text-sm">
+              E
+            </div>
+<div>
+<span class="text-sm font-bold text-white block">Emerson</span>
+<span class="text-xs text-neutral-500">Aluno Havoc Fit • Google Review</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsSection -->
+<!-- BEGIN: LocationAndContactSection -->
+<section class="py-20 bg-brand-cream relative" id="localizacao">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Detalhes de Endereço e Horários -->
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center gap-2 bg-brand-terracotta/10 border border-brand-terracotta/20 rounded-full px-4 py-1">
+<i class="ph ph-map-pin-line text-brand-terracotta"></i>
+<span class="text-xs font-impact tracking-widest text-brand-terracotta uppercase">LOCALIZAÇÃO PRIVILEGIADA</span>
+</div>
+<h2 class="font-impact text-4xl sm:text-5xl text-brand-dark uppercase tracking-tight">
+            FÁCIL DE CHEGAR, <br/>
+<span class="text-brand-terracotta">IMPOSSÍVEL DE LARGAR</span>
+</h2>
+<p class="text-neutral-700 text-base leading-relaxed">
+            Localizado no coração de Americanópolis (Zona Sul de São Paulo), com acesso prático, ambiente seguro e estacionamento nas imediações para sua comodidade.
+          </p>
+<!-- Cards Informativos -->
+<div class="space-y-4 pt-2">
+<!-- Endereço Físico -->
+<div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-brand-dark/10 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center text-2xl flex-shrink-0 mt-0.5">
+<i class="ph-bold ph-map-pin"></i>
+</div>
+<div>
+<span class="font-bold text-brand-dark text-base block">Endereço do Studio:</span>
+<p class="text-sm text-neutral-600">R. Delfino Facchina, 600 - Americanópolis, São Paulo - SP, 04409-080</p>
+<span class="text-xs font-semibold text-brand-terracotta block mt-0.5">Código Plus: 889X+XP Americanópolis</span>
+</div>
+</div>
+<!-- Horários de Funcionamento -->
+<div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-brand-dark/10 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-brand-dark/10 text-brand-dark flex items-center justify-center text-2xl flex-shrink-0 mt-0.5">
+<i class="ph-bold ph-clock"></i>
+</div>
+<div>
+<span class="font-bold text-brand-dark text-base block">Horário de Funcionamento:</span>
+<p class="text-sm text-neutral-600">Segunda a Sexta: <strong class="text-brand-dark">Abre a partir das 06:00</strong></p>
+<p class="text-xs text-neutral-500">Sábados e feriados: consulte os horários especiais de treino.</p>
+</div>
+</div>
+<!-- Contato Direto -->
+<div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-brand-dark/10 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center text-2xl flex-shrink-0 mt-0.5">
+<i class="ph-bold ph-whatsapp-logo"></i>
+</div>
+<div>
+<span class="font-bold text-brand-dark text-base block">WhatsApp &amp; Contato:</span>
+<p class="text-sm text-neutral-600 font-medium">(11) 95884-3199</p>
+<span class="text-xs text-green-600 font-bold block mt-0.5">Atendimento rápido para tirar dúvidas e agendamentos</span>
+</div>
+</div>
+</div>
+<!-- Ações Rápidas -->
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="inline-flex items-center gap-2 bg-brand-dark hover:bg-neutral-900 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition" href="https://maps.google.com/?q=Havoc+Fit+R.+Delfino+Facchina,+600+-+Americanópolis,+São+Paulo+-+SP" target="_blank">
+<i class="ph-bold ph-navigation-arrow text-lg"></i>
+<span>Abrir no Google Maps</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-brand-terracotta hover:bg-brand-terracottaDark text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20visitar%20a%20Havoc%20Fit." target="_blank">
+<i class="ph-bold ph-whatsapp-logo text-lg"></i>
+<span>Falar Agora no WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Card Visual de Localização / Ilustração de Rota -->
+<div class="lg:col-span-6">
+<div class="bg-brand-darker p-8 sm:p-10 rounded-[2.5rem] shadow-2xl border border-neutral-800 text-brand-cream relative overflow-hidden">
+<div class="space-y-4 relative z-10">
+<div class="flex items-center justify-between">
+<span class="text-xs uppercase font-impact tracking-wider text-brand-terracotta">STUDIO HAVOC FIT</span>
+<span class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded bg-green-900/40 text-green-400 font-bold border border-green-800/40">
+<span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span> Aberto
+                </span>
+</div>
+<h3 class="font-impact text-3xl uppercase tracking-tight">Pronto para treinar em um lugar onde você importa?</h3>
+<p class="text-neutral-400 text-sm leading-relaxed">
+                Venha conhecer nossa sala de pesos, conversar com nossos professores e sentir a energia de um studio pensado para a sua evolução sem constrangimento.
+              </p>
+<!-- Mini Formulário Rápido de Contato -->
+<form action="https://wa.me/5511958843199" class="pt-4 space-y-3" data-purpose="whatsapp-lead-form" method="GET" target="_blank">
+<div>
+<label class="block text-xs font-bold text-neutral-300 uppercase tracking-wider mb-1">Qual seu principal objetivo?</label>
+<select class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-brand-cream focus:border-brand-terracotta focus:ring-brand-terracotta" name="text">
+<option value="Olá! Gostaria de agendar uma aula experimental para Emagrecimento e Definição.">Emagrecimento &amp; Definição</option>
+<option value="Olá! Gostaria de agendar uma aula experimental para Ganho de Massa Muscular (Hipertrofia).">Ganho de Massa Muscular</option>
+<option value="Olá! Gostaria de treinar em um ambiente acolhedor e com acompanhamento de postura.">Acompanhamento de Postura &amp; Saúde</option>
+<option value="Olá! Gostaria de saber mais sobre os planos e horários do Studio Havoc Fit.">Outro / Dúvidas gerais</option>
+</select>
+</div>
+<button class="w-full py-4 rounded-xl bg-brand-terracotta hover:bg-brand-terracottaDark text-white font-impact text-lg uppercase tracking-wider shadow-lg transition" type="submit">
+                  Receber Convite VIP no WhatsApp
+                </button>
+</form>
+<div class="text-center pt-2">
+<span class="text-[11px] text-neutral-500 font-medium">Resposta em poucos minutos durante horário de funcionamento.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: LocationAndContactSection -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-brand-darker text-neutral-400 border-t border-neutral-800 pt-16 pb-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-neutral-800">
+<!-- Coluna Marca -->
+<div class="lg:col-span-2 space-y-4">
+<a class="flex items-center gap-2" href="#">
+<div class="w-9 h-9 rounded-xl bg-brand-terracotta text-white flex items-center justify-center font-bold">
+<i class="ph-bold ph-barbell text-xl"></i>
+</div>
+<span class="font-impact text-2xl tracking-wider text-brand-cream">HAVOC<span class="text-brand-terracotta">FIT</span></span>
+</a>
+<p class="text-sm text-neutral-400 max-w-sm leading-relaxed">
+            Studio de treino e condicionamento físico em São Paulo. Foco em atendimento individualizado, ambiente seguro, acolhedor e livre de filas.
+          </p>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 text-xs text-neutral-300">
+<i class="ph-bold ph-rainbow text-brand-terracotta"></i>
+<span>Espaço com orgulho acolhedor e inclusivo LGBTQ+</span>
+</div>
+</div>
+<!-- Links Rápidos -->
+<div>
+<h4 class="font-impact text-sm tracking-wider uppercase text-brand-cream mb-4">Navegação</h4>
+<ul class="space-y-2.5 text-sm">
+<li><a class="hover:text-brand-terracotta transition" href="#inicio">Início</a></li>
+<li><a class="hover:text-brand-terracotta transition" href="#diferenciais">Modelo Studio</a></li>
+<li><a class="hover:text-brand-terracotta transition" href="#planos">Planos e Valores</a></li>
+<li><a class="hover:text-brand-terracotta transition" href="#depoimentos">Avaliações Google</a></li>
+<li><a class="hover:text-brand-terracotta transition" href="#localizacao">Localização</a></li>
+</ul>
+</div>
+<!-- Atendimento & Endereço -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="font-impact text-sm tracking-wider uppercase text-brand-cream mb-4">Studio Havoc Fit</h4>
+<p class="text-sm flex items-start gap-2">
+<i class="ph-bold ph-map-pin text-brand-terracotta mt-0.5"></i>
+<span>R. Delfino Facchina, 600 - Americanópolis, São Paulo - SP, 04409-080</span>
+</p>
+<p class="text-sm flex items-center gap-2">
+<i class="ph-bold ph-clock text-brand-terracotta"></i>
+<span>Seg a Sex a partir das 06:00</span>
+</p>
+<p class="text-sm flex items-center gap-2">
+<i class="ph-bold ph-whatsapp-logo text-brand-terracotta"></i>
+<span>(11) 95884-3199</span>
+</p>
+<div class="flex items-center gap-3 pt-2 text-xl text-neutral-300">
+<a class="w-9 h-9 rounded-lg bg-neutral-900 flex items-center justify-center hover:text-brand-terracotta hover:border-brand-terracotta border border-neutral-800 transition" href="https://wa.me/5511958843199" target="_blank" title="WhatsApp"><i class="ph-bold ph-whatsapp-logo"></i></a>
+<a class="w-9 h-9 rounded-lg bg-neutral-900 flex items-center justify-center hover:text-brand-terracotta hover:border-brand-terracotta border border-neutral-800 transition" href="https://maps.google.com/?q=Havoc+Fit" target="_blank" title="Google Maps"><i class="ph-bold ph-map-trifold"></i></a>
+<a class="w-9 h-9 rounded-lg bg-neutral-900 flex items-center justify-center hover:text-brand-terracotta hover:border-brand-terracotta border border-neutral-800 transition" href="tel:11958843199" title="Telefone"><i class="ph-bold ph-phone"></i></a>
+</div>
+</div>
+</div>
+<!-- Copyright e Assinatura -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+<p>© 2025 Havoc Fit Studio. Todos os direitos reservados. Feito para inspirar consistência e saúde real.</p>
+<p class="flex items-center gap-1">
+<span>São Paulo • Brasil</span>
+</p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: FloatingWhatsAppButton -->
+<aside aria-label="Botão flutuante WhatsApp" class="fixed bottom-6 right-6 z-50">
+<a class="group flex items-center gap-3 bg-brand-terracotta hover:bg-brand-terracottaDark text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl shadow-brand-terracotta/40 transition duration-300 transform hover:scale-105 active:scale-95" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Havoc%20Fit%20e%20quero%20agendar%20uma%20aula%20experimental%20gratuita." target="_blank" title="Falar com o Treinador no WhatsApp">
+<i class="ph-bold ph-whatsapp-logo text-2xl"></i>
+<span class="hidden sm:inline font-bold text-sm tracking-wide">Fale no WhatsApp</span>
+</a>
+</aside>
+<!-- END: FloatingWhatsAppButton -->
+</body></html>

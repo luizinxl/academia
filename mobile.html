@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Havoc Fit - Studio Treino &amp; Saúde | Landing Page Oficial</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Oswald / Anton style & Plus Jakarta Sans / Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700;800&amp;family=Oswald:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {brand: {charcoal: "#121316", surface: "#1a1c22", surfaceElevated: "#21242b", surfaceHighlight: "#292d36", border: "#2f343e", borderSubtle: "#262932", terracotta: "#D95D37", terracottaHover: "#BF4F2D", terracottaLight: "#E06642", muted: "#9ca3af", light: "#d1d5db", pureWhite: "#ffffff"}, error: "#ffb4ab", "surface-tint": "#ffb59f", "on-tertiary-fixed-variant": "#7e2c10", "surface-container-lowest": "#0f0e07", surface: "#15140c", "on-primary-container": "#531200", "on-secondary-container": "#b8b4b4", "secondary-fixed-dim": "#c9c6c5", "surface-container-highest": "#37352c", "on-error": "#690005", tertiary: "#ffb59e", "secondary-container": "#484646", "surface-variant": "#37352c", "surface-container": "#212017", secondary: "#c9c6c5", "on-primary-fixed": "#3a0a00", "inverse-surface": "#e7e2d5", outline: "#a78b83", "on-secondary": "#313030", "inverse-on-surface": "#323127", "tertiary-container": "#dc7352", "on-background": "#e7e2d5", background: "#15140c", "on-secondary-fixed": "#1c1b1b", primary: "#ffb59f", "tertiary-fixed-dim": "#ffb59e", "surface-container-high": "#2c2a21", "surface-container-low": "#1d1c14", "on-tertiary-fixed": "#3a0b00", "on-surface-variant": "#dfc0b7", "tertiary-fixed": "#ffdbd0", "on-surface": "#e7e2d5", "on-error-container": "#ffdad6", "surface-bright": "#3b3930", "on-primary": "#5f1600", "primary-fixed-dim": "#ffb59f", "primary-fixed": "#ffdbd1", "error-container": "#93000a", "on-secondary-fixed-variant": "#484646", "on-tertiary": "#5e1700", "on-tertiary-container": "#521300", "inverse-primary": "#a73916", "on-primary-fixed-variant": "#862300", "outline-variant": "#58423b", "primary-container": "#ea6a42", "secondary-fixed": "#e6e1e1", "surface-dim": "#15140c"}, fontFamily: {display: ["Anton"], sans: ["Plus Jakarta Sans", "Inter", "sans-serif"], headline: ["Anton"], body: ["Plus Jakarta Sans"], label: ["Plus Jakarta Sans"]}, fontSize: {}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style data-purpose="typography-styles">
+    .font-condensed {
+      font-family: 'Oswald', 'Impact', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .headline-tight {
+      line-height: 0.95;
+    }
+</style>
+<style data-purpose="mobile-layout-styles">
+    /* iOS friendly safe area spacing and touch feedback */
+    .safe-bottom-padding {
+      padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 95px);
+    }
+    .tap-highlight-none {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96) translateY(18px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-active {
+      opacity: 1 !important;
+      transform: translateY(0) scale(1) !important;
+    }
+
+    .stagger-1 { transition-delay: 90ms; }
+    .stagger-2 { transition-delay: 180ms; }
+    .stagger-3 { transition-delay: 270ms; }
+    .stagger-4 { transition-delay: 360ms; }
+
+    /* Ambient Hero Pulse */
+    @keyframes heroAuraPulse {
+      0%, 100% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.35;
+      }
+      50% {
+        transform: scale(1.15) translate(4%, 3%);
+        opacity: 0.55;
+      }
+    }
+    .hero-glow-aura {
+      animation: heroAuraPulse 7s ease-in-out infinite;
+    }
+
+    /* Continuous Shimmer Light Sweep on CTAs */
+    .btn-shimmer-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer-sweep::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -150%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.38),
+        transparent
+      );
+      transform: rotate(25deg);
+      animation: shineSweep 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes shineSweep {
+      0% {
+        left: -150%;
+      }
+      40%, 100% {
+        left: 200%;
+      }
+    }
+
+    /* WhatsApp Icon Radar Pulse Effect */
+    @keyframes radarWave {
+      0% {
+        transform: scale(0.92);
+        opacity: 0.9;
+      }
+      70% {
+        transform: scale(1.85);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+    .radar-ring {
+      animation: radarWave 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+    .radar-ring-delayed {
+      animation: radarWave 2.2s cubic-bezier(0.25, 1, 0.5, 1) 0.9s infinite;
+    }
+
+    /* WhatsApp Icon Wiggle */
+    @keyframes gentleWiggle {
+      0%, 70%, 100% {
+        transform: rotate(0deg) scale(1);
+      }
+      74% {
+        transform: rotate(-14deg) scale(1.12);
+      }
+      78% {
+        transform: rotate(12deg) scale(1.15);
+      }
+      82% {
+        transform: rotate(-8deg) scale(1.1);
+      }
+      86% {
+        transform: rotate(6deg) scale(1.05);
+      }
+      90% {
+        transform: rotate(0deg) scale(1);
+      }
+    }
+    .wa-wiggle {
+      animation: gentleWiggle 4.2s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    /* Dynamic Animated Gradient Border for Featured Plan */
+    @keyframes borderGradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .animated-border-wrap {
+      background: linear-gradient(60deg, #d95d37, #ff9e7d, #ff5722, #ea6a42, #d95d37);
+      background-size: 300% 300%;
+      animation: borderGradientShift 5s ease infinite;
+    }
+
+    /* Floating Micro-animation for Feature Icons */
+    @keyframes gentleFloat {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+    .feature-icon-float {
+      animation: gentleFloat 3.5s ease-in-out infinite;
+    }
+    .card-interactive:hover .feature-icon-float,
+    .card-interactive:active .feature-icon-float {
+      transform: translateY(-6px) scale(1.08);
+      transition: transform 0.25s ease;
+    }
+
+    /* Star Twinkle Micro-interaction */
+    @keyframes starTwinkle {
+      0%, 100% {
+        opacity: 0.85;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.8));
+        transform: scale(1.16);
+      }
+    }
+    .twinkle-star {
+      display: inline-block;
+      animation: starTwinkle 2.8s ease-in-out infinite;
+    }
+    .twinkle-1 { animation-delay: 0.1s; }
+    .twinkle-2 { animation-delay: 0.35s; }
+    .twinkle-3 { animation-delay: 0.6s; }
+    .twinkle-4 { animation-delay: 0.85s; }
+    .twinkle-5 { animation-delay: 1.1s; }
+
+    /* Badge Micro-pulse */
+    @keyframes badgePulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(217, 93, 55, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 12px 2px rgba(217, 93, 55, 0.6);
+      }
+    }
+    .badge-glow-pulse {
+      animation: badgePulse 2.8s infinite;
+    }
+
+    /* Subtle glow accent */
+    .glow-terracotta {
+      box-shadow: 0 0 25px -4px rgba(217, 93, 55, 0.45);
+    }
+    .glow-terracotta-strong {
+      box-shadow: 0 8px 30px -4px rgba(217, 93, 55, 0.65), 0 0 15px 0 rgba(217, 93, 55, 0.3);
+    }
+
+    /* Ripple tap effect */
+    .ripple-target {
+      position: relative;
+      overflow: hidden;
+    }
+    .ripple-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(0);
+      animation: rippleAnim 0.6s linear;
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .btn-shimmer-sweep::after,
+      .radar-ring,
+      .radar-ring-delayed,
+      .wa-wiggle,
+      .hero-glow-aura,
+      .animated-border-wrap,
+      .feature-icon-float,
+      .twinkle-star,
+      .badge-glow-pulse {
+        animation: none !important;
+      }
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+</head>
+<body class="bg-brand-charcoal text-brand-light font-sans antialiased selection:bg-brand-terracotta selection:text-white tap-highlight-none">
+<!-- BEGIN: MobileHeader -->
+<header class="sticky top-3 z-40 px-3 max-w-md mx-auto w-full transition-transform duration-300" id="site-header">
+<div class="bg-[#181a20]/90 backdrop-blur-md border border-white/10 rounded-full px-3.5 py-2 flex items-center justify-between shadow-lg shadow-black/40 transition-all duration-300 hover:border-brand-terracotta/40" id="header-container">
+<a class="flex items-center gap-2 group" data-purpose="brand-logo" href="#">
+<div class="w-7 h-7 rounded-full bg-brand-terracotta flex items-center justify-center text-white font-extrabold text-sm shadow-sm transition-transform duration-300 group-hover:scale-110">H</div>
+<div class="flex flex-col leading-none">
+<span class="font-condensed font-bold text-base text-white tracking-wider flex items-center gap-0.5">HAVOC<span class="text-brand-terracotta">FIT</span></span>
+<span class="text-[8px] uppercase tracking-widest text-neutral-400 font-semibold">Studio Treino &amp; Saúde</span>
+</div>
+</a>
+<div class="flex items-center gap-1.5">
+<a class="btn-shimmer-sweep relative bg-brand-terracotta hover:bg-brand-terracottaHover text-white text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm text-center flex items-center gap-1.5 active:scale-95 transition-transform" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20na%20Havoc%20Fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+</span>
+<span>Agendar Aula</span>
+</a>
+<button aria-label="Abrir Menu" class="w-8 h-8 rounded-full bg-brand-surfaceElevated border border-brand-border flex flex-col items-center justify-center gap-1 hover:border-neutral-500 active:scale-95 transition" type="button">
+<span class="w-3.5 h-0.5 bg-neutral-200 rounded-full"></span>
+<span class="w-3.5 h-0.5 bg-neutral-200 rounded-full"></span>
+<span class="w-2.5 h-0.5 bg-brand-terracotta rounded-full self-start ml-2"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- END: MobileHeader -->
+<main class="w-full overflow-hidden safe-bottom-padding relative">
+<!-- Dynamic Ambient Glow behind Hero -->
+<div class="hero-glow-aura pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 w-[340px] h-[340px] rounded-full bg-gradient-to-br from-brand-terracotta/25 via-amber-600/15 to-transparent blur-3xl -z-10"></div>
+<!-- BEGIN: HeroSection -->
+<section class="px-4 pt-7 pb-8 max-w-md mx-auto relative" data-purpose="hero-section">
+<!-- Location Pill Badge -->
+<div class="inline-flex items-center gap-2 bg-brand-terracotta/15 border border-brand-terracotta/40 text-brand-terracottaLight text-xs font-semibold px-3 py-1.5 rounded-full mb-4 reveal reveal-active">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-terracotta opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-brand-terracotta"></span>
+</span>
+<span>STUDIO FITNESS EXCLUSIVO • SÃO PAULO</span>
+</div>
+<!-- Main Heading with Staggered Visual Flow -->
+<h1 class="font-condensed headline-tight text-[44px] tracking-tight text-white font-black mb-3 reveal stagger-1 reveal-active">
+      COMECE HOJE SUA <br/>
+<span class="text-brand-terracotta drop-shadow-[0_2px_14px_rgba(217,93,55,0.4)]">JORNADA FITNESS</span>
+</h1>
+<!-- Subtitle Description -->
+<p class="text-sm text-neutral-300 leading-relaxed font-normal mb-6 reveal stagger-2 reveal-active">
+      Mais que uma academia convencional com aparelhos lotados: somos um <strong class="text-white font-semibold">studio com acompanhamento próximo dos professores</strong>, ambiente acolhedor e foco real na sua evolução diária.
+    </p>
+<!-- Primary Action Buttons -->
+<div class="flex flex-col gap-3 mb-6 reveal stagger-3 reveal-active" data-purpose="hero-actions">
+<a class="btn-shimmer-sweep w-full bg-brand-terracotta hover:bg-brand-terracottaHover text-white font-bold text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 shadow-lg glow-terracotta-strong active:scale-95 transition-all" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20na%20Havoc%20Fit">
+<span>Agendar Minha Visita</span>
+<svg class="w-4 h-4 text-white transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</a>
+<a class="w-full bg-brand-surface border border-brand-border text-white font-semibold text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2.5 shadow-sm hover:border-neutral-500 hover:text-white active:scale-95 transition-all" href="#studio-video">
+<span class="w-6 h-6 rounded-full bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center text-xs">▶</span>
+<span>Conhecer o Studio</span>
+</a>
+</div>
+<!-- Compact 3-Column Metrics Bar with Progressive Counter-Up -->
+<div class="grid grid-cols-3 gap-2 py-3.5 px-2 bg-brand-surface rounded-2xl border border-brand-border shadow-md mb-6 text-center reveal reveal-active" id="metrics-counter-section">
+<!-- Metric 1: Rating -->
+<div class="flex flex-col items-center justify-center border-r border-brand-border/80 px-1 reveal stagger-1 reveal-active">
+<div class="flex items-center gap-1 text-brand-terracotta font-extrabold text-base leading-none">
+<span class="counter-val" data-decimals="1" data-target="4.7">0.0</span>
+<span class="text-amber-400 text-xs">★</span>
+</div>
+<span class="text-[10px] text-neutral-400 font-medium mt-1 leading-tight">Google Maps (+84 avaliações)</span>
+</div>
+<!-- Metric 2: Posture -->
+<div class="flex flex-col items-center justify-center border-r border-brand-border/80 px-1 reveal stagger-2 reveal-active">
+<div class="text-brand-terracotta font-extrabold text-base leading-none">
+<span class="counter-val" data-decimals="0" data-target="100">0</span>%
+        </div>
+<span class="text-[10px] text-neutral-400 font-medium mt-1 leading-tight">Apoio postural contínuo</span>
+</div>
+<!-- Metric 3: No Queues -->
+<div class="flex flex-col items-center justify-center px-1 reveal stagger-3 reveal-active">
+<div class="text-white font-extrabold text-base leading-none uppercase tracking-wide">
+          ZERO
+        </div>
+<span class="text-[10px] text-neutral-400 font-medium mt-1 leading-tight">Fila em aparelhos</span>
+</div>
+</div>
+<!-- Social Proof Snippet -->
+<div class="flex items-center gap-3 bg-brand-surface p-3.5 rounded-xl border border-brand-border mb-6 reveal reveal-active">
+<div class="flex -space-x-2 shrink-0">
+<div class="w-8 h-8 rounded-full border-2 border-brand-surface bg-neutral-700 flex items-center justify-center text-[10px] font-bold text-white">CA</div>
+<div class="w-8 h-8 rounded-full border-2 border-brand-surface bg-neutral-600 flex items-center justify-center text-[10px] font-bold text-white">EM</div>
+<div class="w-8 h-8 rounded-full border-2 border-brand-surface bg-brand-terracotta text-white flex items-center justify-center text-[10px] font-bold">+84</div>
+</div>
+<div class="flex flex-col text-left">
+<div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
+<span class="twinkle-star twinkle-1">★</span>
+<span class="twinkle-star twinkle-2">★</span>
+<span class="twinkle-star twinkle-3">★</span>
+<span class="twinkle-star twinkle-4">★</span>
+<span class="twinkle-star twinkle-5">★</span>
+<span class="text-white text-[11px] ml-0.5 font-medium">4.7 de 5 estrelas</span>
+</div>
+<p class="text-[11px] text-neutral-400 leading-tight">Reconhecido pela simpatia dos professores e ambiente motivador</p>
+</div>
+</div>
+<!-- Hero Visual Card -->
+<div class="relative rounded-2xl overflow-hidden bg-brand-surfaceElevated border border-brand-border shadow-xl reveal-scale reveal-active" data-purpose="hero-image-card" id="studio-video">
+<div class="h-80 w-full bg-gradient-to-t from-black via-zinc-950 to-neutral-900 relative flex items-end p-4">
+<!-- Ambient Decorative Gym Grid Watermark -->
+<div class="absolute inset-0 opacity-25 bg-[radial-gradient(#d95d37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<!-- Floating Overlay Tag: Studio Brand -->
+<div class="absolute top-3 left-3 bg-[#121316]/80 backdrop-blur-md px-2.5 py-1 rounded-md text-white text-[11px] font-condensed tracking-wider border border-white/10">
+          HAVOC FIT STUDIO
+        </div>
+<!-- Floating Overlay Tag: Supervision with Micro-pulse -->
+<div class="absolute top-3 right-3 bg-brand-terracotta text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow badge-glow-pulse">
+          Supervisão Contínua
+        </div>
+<!-- Bottom Card Content Floating Info -->
+<div class="relative z-10 w-full flex flex-col gap-2">
+<!-- Free Weights Spec Tag -->
+<div class="bg-brand-surface/90 backdrop-blur-md rounded-xl p-2.5 border border-brand-border flex items-center justify-between text-white transition-all hover:border-brand-terracotta/50">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-lg bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center text-sm feature-icon-float">🏋️</span>
+<div>
+<p class="text-[9px] uppercase tracking-wider text-neutral-400 font-semibold">Foco em halteres &amp; pesos</p>
+<p class="text-xs font-bold leading-tight text-white">Treino Livre Orientado</p>
+</div>
+</div>
+<span class="text-[10px] text-emerald-400 font-semibold">Postura Correta</span>
+</div>
+<!-- Inclusive Environment Badge -->
+<div class="bg-brand-surface/90 backdrop-blur-md rounded-xl p-2.5 border border-brand-border flex items-center justify-between text-white transition-all hover:border-rose-500/50">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center text-sm feature-icon-float">🏳️‍🌈</span>
+<div>
+<p class="text-[9px] uppercase tracking-wider text-neutral-400 font-semibold">Ambiente Inclusivo</p>
+<p class="text-xs font-bold leading-tight text-white">Respeito &amp; Liberdade LGBTQ+</p>
+</div>
+</div>
+<span class="bg-emerald-950/90 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/30">100% Seguro</span>
+</div>
+</div>
+</div>
+<!-- Studio Quick Loc Footnote -->
+<div class="bg-brand-surface px-3.5 py-2.5 flex items-center justify-between text-neutral-400 text-[10px] border-t border-brand-border">
+<span class="font-medium">Americanópolis • SP</span>
+<div class="flex items-center gap-2 text-neutral-300">
+<span>(11) 95884-3199</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: WhyChooseHavocSection -->
+<section class="bg-brand-surface py-12 px-4 border-y border-brand-border relative" data-purpose="features-section">
+<div class="max-w-md mx-auto">
+<!-- Sub-badge -->
+<div class="text-center mb-3 reveal reveal-active">
+<span class="text-brand-terracotta uppercase font-bold text-[11px] tracking-widest inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-terracotta"></span>
+          Por que escolher a Havoc Fit
+        </span>
+</div>
+<!-- Section Title -->
+<h2 class="font-condensed text-center text-3xl font-black tracking-tight leading-none mb-3 text-white reveal stagger-1 reveal-active">
+        O FORMATO STUDIO FEITO PARA QUEM QUER <br/>
+<span class="text-brand-terracotta">RESULTADO REAL</span>
+</h2>
+<p class="text-center text-xs text-neutral-400 mb-8 leading-relaxed reveal stagger-2 reveal-active">
+        Diferente das academias de rede onde você é só mais um número e fica abandonado com uma ficha impressa, no Studio Havoc Fit você tem apoio humano e próximo todos os dias.
+      </p>
+<!-- Feature Cards Stack with Micro-Interactions -->
+<div class="flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="card-interactive bg-brand-surfaceElevated rounded-2xl p-5 border border-brand-border hover:border-brand-terracotta/40 transition-all duration-300 active:scale-[0.985] shadow-md reveal stagger-1 reveal-active">
+<div class="w-10 h-10 rounded-xl bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center text-lg mb-3 feature-icon-float">
+            👥
+          </div>
+<h3 class="font-condensed text-lg font-bold text-white tracking-wide uppercase mb-2">
+            Treinadores que te conhecem pelo nome
+          </h3>
+<p class="text-xs text-neutral-300 leading-relaxed mb-4">
+            Nosso ambiente menor é uma vantagem deliberada: nossos professores corrigem sua postura, ajustam as cargas e incentivam você em cada repetição para evitar lesões.
+          </p>
+<div class="text-[11px] text-brand-terracotta font-bold flex items-center gap-1">
+<span>⊙</span> Acompanhamento Próximo
+          </div>
+</div>
+<!-- Card 2: Highlighted Inclusive with Pulse Badge -->
+<div class="card-interactive bg-brand-surfaceElevated rounded-2xl p-5 border-2 border-brand-terracotta relative overflow-hidden shadow-lg shadow-brand-terracotta/10 active:scale-[0.985] transition-all duration-300 reveal stagger-2 reveal-active">
+<div class="absolute top-0 right-0 bg-brand-terracotta text-white text-[9px] font-extrabold uppercase px-2.5 py-1 rounded-bl-lg badge-glow-pulse">
+            Diferencial Humano
+          </div>
+<div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg mb-3 feature-icon-float">
+            🌈
+          </div>
+<h3 class="font-condensed text-lg font-bold text-white tracking-wide uppercase mb-2">
+            Espaço Inclusivo &amp; Seguro LGBTQ+
+          </h3>
+<p class="text-xs text-neutral-300 leading-relaxed mb-4">
+            Apoiamos e acolhemos com orgulho a diversidade. Um ambiente livre de julgamentos, onde qualquer pessoa se sente respeitada, confiante e confortável para treinar com foco total.
+          </p>
+<div class="text-[11px] text-brand-terracotta font-bold flex items-center gap-1">
+<span>⊙</span> Respeito e Bem-estar Garantidos
+          </div>
+</div>
+<!-- Card 3 -->
+<div class="card-interactive bg-brand-surfaceElevated rounded-2xl p-5 border border-brand-border hover:border-brand-terracotta/40 transition-all duration-300 active:scale-[0.985] shadow-md reveal stagger-3 reveal-active">
+<div class="w-10 h-10 rounded-xl bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center text-lg mb-3 feature-icon-float">
+            ⏱️
+          </div>
+<h3 class="font-condensed text-lg font-bold text-white tracking-wide uppercase mb-2">
+            Sem perda de tempo com filas
+          </h3>
+<p class="text-xs text-neutral-300 leading-relaxed mb-4">
+            Chega de revezar 5 pessoas no mesmo aparelho. Nossa estrutura é dimensionada para fluidez: pesos livres, puxadores, remadas e funcional com disponibilidade imediata.
+          </p>
+<div class="text-[11px] text-brand-terracotta font-bold flex items-center gap-1">
+<span>⊙</span> Treino Ágil em 50 Minutos
+          </div>
+</div>
+</div>
+<!-- Studio Manifesto Quote Box -->
+<div class="mt-8 bg-brand-charcoal border border-brand-border rounded-2xl p-4 flex gap-3 items-start reveal reveal-active">
+<div class="w-8 h-8 rounded-full bg-brand-terracotta/20 text-brand-terracotta shrink-0 flex items-center justify-center text-sm font-bold">
+          💬
+        </div>
+<div>
+<p class="text-[10px] uppercase font-bold text-brand-terracotta tracking-wider">Compromisso Havoc Fit:</p>
+<p class="text-xs italic text-neutral-300 mt-1 leading-snug">
+            "Nossa academia visa um atendimento no modelo Studio: onde o espaço menor e intimista é nossa maior vantagem para oferecer atenção personalizada, acolhimento e resultados consistentes para cada aluno."
+          </p>
+<p class="text-[10px] text-neutral-400 mt-2 font-medium">— Equipe Havoc Fit Studio, Americanópolis</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhyChooseHavocSection -->
+<!-- BEGIN: PricingPlansSection -->
+<section class="px-4 py-12 max-w-md mx-auto" data-purpose="pricing-plans-section">
+<div class="text-center mb-3 reveal reveal-active">
+<span class="text-brand-terracotta uppercase font-bold text-[11px] tracking-wider">Transparência e Valor Real</span>
+</div>
+<h2 class="font-condensed text-center text-3xl font-black tracking-tight leading-none mb-2 text-white reveal stagger-1 reveal-active">
+      PLANOS PARA SEU <span class="text-brand-terracotta">RITMO DE VIDA</span>
+</h2>
+<p class="text-center text-xs text-neutral-400 mb-8 max-w-xs mx-auto reveal stagger-2 reveal-active">
+      Sem taxas ocultas, sem pegadinhas. Escolha a melhor opção para transformar sua rotina com suporte contínuo.
+    </p>
+<!-- Pricing Stack -->
+<div class="flex flex-col gap-6">
+<!-- PLAN 1: Mensal Studio -->
+<div class="bg-brand-surface rounded-2xl p-5 border border-brand-border shadow-md active:scale-[0.985] transition-transform reveal stagger-1 reveal-active card-interactive">
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Flexibilidade</span>
+<h3 class="font-condensed text-xl font-bold uppercase tracking-wide text-white">Mensal Studio</h3>
+</div>
+<span class="bg-brand-surfaceElevated text-neutral-300 border border-brand-border text-[10px] font-bold px-2 py-0.5 rounded">Sem Fidelidade</span>
+</div>
+<p class="text-xs text-neutral-300 mb-4">Ideal para quem quer experimentar a dinâmica do studio sem compromisso a longo prazo.</p>
+<div class="mb-4">
+<span class="text-xs text-neutral-400">A partir de</span>
+<div class="flex items-baseline gap-1">
+<span class="font-bold text-sm text-brand-terracotta">R$</span>
+<span class="font-condensed text-4xl font-extrabold tracking-tight text-white">119</span>
+<span class="text-xs text-neutral-400">/mês</span>
+</div>
+</div>
+<!-- Feature List -->
+<ul class="text-xs text-neutral-300 space-y-2.5 mb-6 border-t border-brand-border pt-4">
+<li class="flex items-center gap-2">
+<span class="text-emerald-400 font-bold">✓</span>
+<span>Acesso total ao espaço de musculação e pesos livres</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-emerald-400 font-bold">✓</span>
+<span>Orientação contínua de professores no salão</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-emerald-400 font-bold">✓</span>
+<span>Sem taxa de cancelamento</span>
+</li>
+<li class="flex items-center gap-2 text-neutral-500 line-through">
+<span>✕</span>
+<span>Avaliação física periódica inclusa</span>
+</li>
+</ul>
+<a class="block w-full text-center py-3 px-4 rounded-xl border border-brand-border bg-brand-surfaceElevated hover:border-neutral-500 font-bold text-xs text-white active:scale-95 transition-all duration-200" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Mensal">
+          Contratar Mensal
+        </a>
+</div>
+<!-- PLAN 2: Trimestral (FEATURED / ANIMATED GRADIENT BORDER) -->
+<div class="animated-border-wrap p-[2px] rounded-2xl shadow-xl shadow-brand-terracotta/20 reveal-scale stagger-2 reveal-active">
+<div class="bg-brand-surfaceElevated text-white rounded-[14px] p-5 relative overflow-hidden active:scale-[0.985] transition-transform card-interactive">
+<!-- Top Badge -->
+<div class="text-center -mt-5 -mx-5 mb-4 bg-brand-terracotta py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-white flex items-center justify-center gap-1 shadow-sm">
+<span>★</span> MAIS RECOMENDADO <span>★</span>
+</div>
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-brand-terracotta">Consistência e Foco</span>
+<h3 class="font-condensed text-2xl font-bold uppercase tracking-wide text-white">Trimestral Studio</h3>
+</div>
+<span class="bg-brand-terracotta/20 text-brand-terracotta text-[10px] font-bold px-2 py-0.5 rounded border border-brand-terracotta/40 badge-glow-pulse">Melhor Custo-Benefício</span>
+</div>
+<p class="text-xs text-neutral-300 mb-4">O tempo certo para consolidar hábitos, queimar gordura e ganhar massa muscular com suporte.</p>
+<div class="mb-4">
+<span class="text-xs text-neutral-400">Apenas</span>
+<div class="flex items-baseline gap-1">
+<span class="font-bold text-sm text-brand-terracotta">R$</span>
+<span class="font-condensed text-5xl font-black tracking-tight text-white">89</span>
+<span class="text-xs text-neutral-400">/mês equiv.</span>
+</div>
+<span class="text-[10px] text-neutral-400">Plano trimestral parcelado sem travar limite alto</span>
+</div>
+<!-- Feature List -->
+<ul class="text-xs text-neutral-200 space-y-2.5 mb-6 border-t border-brand-border pt-4">
+<li class="flex items-center gap-2">
+<span class="text-brand-terracotta font-bold text-sm">✓</span>
+<span><strong>Treino individualizado</strong> montado para você</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-brand-terracotta font-bold text-sm">✓</span>
+<span><strong>Avaliação física completa</strong> e medições</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-brand-terracotta font-bold text-sm">✓</span>
+<span>Ajustes quinzenais de carga e exercícios</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-brand-terracotta font-bold text-sm">✓</span>
+<span>Suporte de dúvidas via WhatsApp do Studio</span>
+</li>
+</ul>
+<a class="btn-shimmer-sweep block w-full text-center py-3.5 px-4 rounded-xl bg-brand-terracotta hover:bg-brand-terracottaHover font-bold text-sm text-white shadow-lg glow-terracotta-strong active:scale-95 transition-all duration-200" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Quero%20aproveitar%20o%20Plano%20Trimestral%20Recomendado">
+            Garantir Esta Condição
+          </a>
+</div>
+</div>
+<!-- PLAN 3: Personal Studio -->
+<div class="bg-brand-surface rounded-2xl p-5 border border-brand-border shadow-md active:scale-[0.985] transition-transform reveal stagger-3 reveal-active card-interactive">
+<div class="flex justify-between items-start mb-2">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400">Exclusividade Máxima</span>
+<h3 class="font-condensed text-xl font-bold uppercase tracking-wide text-white">Personal Studio</h3>
+</div>
+<span class="bg-amber-950/40 border border-amber-600/40 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded">Vagas Limitadas</span>
+</div>
+<p class="text-xs text-neutral-300 mb-4">Para quem busca acompanhamento exclusivo 1 a 1 para atingir metas desafiadoras.</p>
+<div class="mb-4">
+<span class="text-xs text-neutral-400">Consulte horários</span>
+<div class="font-condensed text-2xl font-bold tracking-tight text-white">Sob Consulta</div>
+<span class="text-[10px] text-neutral-400">Pacotes mensais e bissemanais personalizados</span>
+</div>
+<!-- Feature List -->
+<ul class="text-xs text-neutral-300 space-y-2.5 mb-6 border-t border-brand-border pt-4">
+<li class="flex items-center gap-2">
+<span class="text-emerald-400 font-bold">✓</span>
+<span>Professor dedicado durante 100% da sua sessão</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-emerald-400 font-bold">✓</span>
+<span>Planejamento para hipertrofia, emagrecimento ou reabilitação</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="text-emerald-400 font-bold">✓</span>
+<span>Flexibilidade de agendamento prioritário</span>
+</li>
+</ul>
+<a class="block w-full text-center py-3 px-4 rounded-xl border border-brand-border bg-brand-surfaceElevated hover:border-neutral-500 font-bold text-xs text-white active:scale-95 transition-all duration-200" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20do%20Personal%20Studio">
+          Consultar Disponibilidade
+        </a>
+</div>
+</div>
+<p class="text-[11px] text-center text-neutral-400 mt-5 leading-tight reveal reveal-active">
+      *Valores e promoções vigentes sujeitos a alteração sem aviso prévio. Consulte formas de pagamento no balcão (PIX, Cartões e Boleto).
+    </p>
+</section>
+<!-- END: PricingPlansSection -->
+<!-- BEGIN: GoogleReviewsSection -->
+<section class="bg-brand-surface py-12 px-4 border-y border-brand-border" data-purpose="testimonials-section">
+<div class="max-w-md mx-auto">
+<div class="flex items-center justify-between mb-5 reveal reveal-active">
+<div>
+<span class="text-[10px] font-bold text-brand-terracotta tracking-wider uppercase flex items-center gap-1">
+<span class="twinkle-star twinkle-1">★</span> Avaliações Reais no Google Maps
+          </span>
+<h2 class="font-condensed text-2xl font-bold tracking-tight text-white">
+            QUEM TREINA AQUI, <span class="text-brand-terracotta">RECOMENDA</span>
+</h2>
+</div>
+<div class="text-right">
+<span class="text-xl font-black text-white">4.7</span>
+<div class="text-amber-400 text-xs">
+<span class="twinkle-star twinkle-1">★</span>
+<span class="twinkle-star twinkle-2">★</span>
+<span class="twinkle-star twinkle-3">★</span>
+<span class="twinkle-star twinkle-4">★</span>
+<span class="twinkle-star twinkle-5">★</span>
+</div>
+<span class="text-[9px] text-neutral-400">+84 opiniões verificadas</span>
+</div>
+</div>
+<!-- Stacked Reviews for Mobile Reading -->
+<div class="flex flex-col gap-4">
+<!-- Review 1 -->
+<div class="bg-brand-surfaceElevated p-4 rounded-2xl border border-brand-border hover:border-brand-terracotta/40 transition-all active:scale-[0.99] reveal stagger-1 reveal-active card-interactive">
+<div class="flex text-amber-400 text-xs mb-2">
+<span class="twinkle-star twinkle-1">★</span>
+<span class="twinkle-star twinkle-2">★</span>
+<span class="twinkle-star twinkle-3">★</span>
+<span class="twinkle-star twinkle-4">★</span>
+<span class="twinkle-star twinkle-5">★</span>
+</div>
+<p class="text-xs text-neutral-200 italic leading-relaxed mb-3">
+            "Ambiente top, equipamentos de qualidade e atendimento excelente! Me sinto motivada a treinar todos os dias 💪🔥"
+          </p>
+<div class="flex items-center gap-2.5 pt-2.5 border-t border-brand-border/60">
+<div class="w-7 h-7 rounded-full bg-brand-terracotta text-white flex items-center justify-center text-xs font-bold">
+              A
+            </div>
+<div>
+<h4 class="text-xs font-bold text-white">Amanda</h4>
+<p class="text-[10px] text-neutral-400">Aluna Havoc Fit • Google Review</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-brand-surfaceElevated p-4 rounded-2xl border border-brand-border hover:border-brand-terracotta/40 transition-all active:scale-[0.99] reveal stagger-2 reveal-active card-interactive">
+<div class="flex text-amber-400 text-xs mb-2">
+<span class="twinkle-star twinkle-1">★</span>
+<span class="twinkle-star twinkle-2">★</span>
+<span class="twinkle-star twinkle-3">★</span>
+<span class="twinkle-star twinkle-4">★</span>
+<span class="twinkle-star twinkle-5">★</span>
+</div>
+<p class="text-xs text-neutral-200 italic leading-relaxed mb-3">
+            "Um ótimo ambiente pra se treinar, professores super simpáticos e atenciosos! A gente não fica perdida no treino."
+          </p>
+<div class="flex items-center gap-2.5 pt-2.5 border-t border-brand-border/60">
+<div class="w-7 h-7 rounded-full bg-neutral-600 text-white flex items-center justify-center text-xs font-bold">
+              CA
+            </div>
+<div>
+<h4 class="text-xs font-bold text-white">Camila Aparecida</h4>
+<p class="text-[10px] text-neutral-400">Aluna Havoc Fit • Google Review</p>
+</div>
+</div>
+</div>
+<!-- Review 3 (With Studio Response) -->
+<div class="bg-brand-surfaceElevated p-4 rounded-2xl border border-brand-border hover:border-brand-terracotta/40 transition-all active:scale-[0.99] reveal stagger-3 reveal-active card-interactive">
+<div class="flex text-amber-400 text-xs mb-2">
+<span class="twinkle-star twinkle-1">★</span>
+<span class="twinkle-star twinkle-2">★</span>
+<span class="twinkle-star twinkle-3">★</span>
+<span class="twinkle-star twinkle-4">★</span>
+<span class="twinkle-star twinkle-5">★</span>
+</div>
+<p class="text-xs text-neutral-200 italic leading-relaxed mb-2">
+            "Academia compacta com atmosfera agradável e sem confusão de grandes redes. Professor sempre de olho na postura."
+          </p>
+<!-- Studio Reply Bubble -->
+<div class="bg-brand-charcoal rounded-xl p-2.5 mb-3 border-l-2 border-brand-terracotta text-[11px] text-neutral-300">
+<strong class="text-brand-terracotta text-[10px] block">Resposta do Studio:</strong>
+            Nosso objetivo é exatamente esse formato Studio: estar perto de cada aluno!
+          </div>
+<div class="flex items-center gap-2.5 pt-2.5 border-t border-brand-border/60">
+<div class="w-7 h-7 rounded-full bg-amber-700 text-white flex items-center justify-center text-xs font-bold">
+              E
+            </div>
+<div>
+<h4 class="text-xs font-bold text-white">Emerson</h4>
+<p class="text-[10px] text-neutral-400">Aluno Havoc Fit • Google Review</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: GoogleReviewsSection -->
+<!-- BEGIN: LocationAndContactSection -->
+<section class="px-4 py-12 max-w-md mx-auto" data-purpose="location-contact-section">
+<div class="text-center mb-2 reveal reveal-active">
+<span class="text-brand-terracotta uppercase font-bold text-[11px] tracking-wider">Localização Privilegiada</span>
+</div>
+<h2 class="font-condensed text-center text-3xl font-black tracking-tight leading-none mb-3 text-white reveal stagger-1 reveal-active">
+      FÁCIL DE CHEGAR, <br/>
+<span class="text-brand-terracotta">IMPOSSÍVEL DE LARGAR</span>
+</h2>
+<p class="text-center text-xs text-neutral-400 mb-6 reveal stagger-2 reveal-active">
+      Localizado no coração de Americanópolis (Zona Sul de São Paulo), com acesso prático, ambiente seguro e estacionamento nas imediações para sua comodidade.
+    </p>
+<!-- Contact & Info Cards -->
+<div class="space-y-3 mb-6">
+<!-- Address -->
+<div class="bg-brand-surface p-3.5 rounded-xl border border-brand-border flex items-start gap-3 shadow-sm hover:border-brand-terracotta/40 transition-colors reveal stagger-1 reveal-active">
+<div class="w-8 h-8 rounded-lg bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center shrink-0 text-base feature-icon-float">
+          📍
+        </div>
+<div>
+<h4 class="text-xs font-bold text-white">Endereço do Studio:</h4>
+<p class="text-xs text-neutral-300">R. Delfino Facchina, 600 - Americanópolis, São Paulo - SP, 04409-080</p>
+<span class="text-[10px] text-brand-terracotta font-semibold">Código Plus: 889X+XP Americanópolis</span>
+</div>
+</div>
+<!-- Working Hours -->
+<div class="bg-brand-surface p-3.5 rounded-xl border border-brand-border flex items-start gap-3 shadow-sm hover:border-brand-terracotta/40 transition-colors reveal stagger-2 reveal-active">
+<div class="w-8 h-8 rounded-lg bg-brand-terracotta/20 text-brand-terracotta flex items-center justify-center shrink-0 text-base feature-icon-float">
+          ⏰
+        </div>
+<div>
+<h4 class="text-xs font-bold text-white">Horário de Funcionamento:</h4>
+<p class="text-xs text-neutral-300">Segunda a Sexta: <strong class="text-white">Abre a partir das 06:00</strong></p>
+<p class="text-[10px] text-neutral-400">Sábados e Feriados: consulte os horários especiais de treino.</p>
+</div>
+</div>
+<!-- Phone WhatsApp -->
+<div class="bg-brand-surface p-3.5 rounded-xl border border-brand-border flex items-start gap-3 shadow-sm hover:border-emerald-500/40 transition-colors reveal stagger-3 reveal-active">
+<div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 text-base feature-icon-float">
+          💬
+        </div>
+<div>
+<h4 class="text-xs font-bold text-white">WhatsApp &amp; Contato:</h4>
+<p class="text-xs text-white font-semibold">(11) 95884-3199</p>
+<p class="text-[10px] text-emerald-400 font-medium">Atendimento rápido para tirar dúvidas e agendamentos</p>
+</div>
+</div>
+</div>
+<!-- Direction CTA Buttons -->
+<div class="grid grid-cols-2 gap-2.5 mb-8 reveal reveal-active">
+<a class="bg-brand-surface hover:bg-brand-surfaceElevated border border-brand-border text-white text-xs font-bold py-3 px-3 rounded-xl flex items-center justify-center gap-1.5 shadow active:scale-95 transition text-center" href="https://maps.google.com/?q=R.+Delfino+Facchina,+600+-+Americanopolis,+São+Paulo+-+SP" rel="noopener noreferrer" target="_blank">
+<span>Abrir no Google Maps</span>
+</a>
+<a class="btn-shimmer-sweep bg-brand-terracotta hover:bg-brand-terracottaHover text-white text-xs font-bold py-3 px-3 rounded-xl flex items-center justify-center gap-1.5 shadow glow-terracotta active:scale-95 transition text-center" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20na%20Havoc%20Fit">
+<span>Falar no WhatsApp</span>
+</a>
+</div>
+<!-- Quick Conversion Box Form -->
+<div class="bg-brand-surface rounded-2xl p-5 shadow-xl border border-brand-border reveal-scale reveal-active" data-purpose="quick-conversion-box">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold uppercase tracking-wider text-brand-terracotta">Studio Havoc Fit</span>
+<span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Aberto Agora
+        </span>
+</div>
+<h3 class="font-condensed text-xl font-bold uppercase tracking-wide leading-tight mb-2 text-white">
+        Pronto para treinar em um lugar onde você importa?
+      </h3>
+<p class="text-xs text-neutral-300 leading-relaxed mb-4">
+        Venha conhecer nossa sala de pesos, conversar com nossos professores e sentir a energia de um studio pensado para a sua evolução sem constrangimento.
+      </p>
+<form action="https://wa.me/5511958843199" class="space-y-3" method="GET" onsubmit="window.open('https://wa.me/5511958843199?text=' + encodeURIComponent('Olá! Tenho interesse no Studio Havoc Fit. Meu objetivo principal é: ' + document.getElementById('user_goal').value), '_blank'); return false;">
+<div>
+<label class="block text-[11px] font-semibold text-neutral-300 mb-1.5" for="user_goal">Qual seu principal objetivo?</label>
+<select class="w-full bg-brand-surfaceElevated border-brand-border text-white text-xs rounded-xl py-2.5 px-3 focus:ring-brand-terracotta focus:border-brand-terracotta" id="user_goal">
+<option value="Emagrecimento &amp; Definição">Emagrecimento &amp; Definição</option>
+<option value="Ganho de Massa Muscular">Ganho de Massa Muscular (Hipertrofia)</option>
+<option value="Saúde &amp; Correção de Postura">Saúde &amp; Correção de Postura</option>
+<option value="Voltar a Treinar sem Vergonha">Voltar a Treinar sem Vergonha</option>
+</select>
+</div>
+<button class="btn-shimmer-sweep w-full bg-brand-terracotta hover:bg-brand-terracottaHover text-white font-condensed tracking-wider font-bold text-sm uppercase py-3.5 px-4 rounded-xl shadow-lg glow-terracotta-strong active:scale-95 transition-all duration-200" type="submit">
+          Receber Convite VIP no WhatsApp
+        </button>
+</form>
+<p class="text-[10px] text-center text-neutral-400 mt-3">Resposta em poucos minutos durante horário de funcionamento.</p>
+</div>
+</section>
+<!-- END: LocationAndContactSection -->
+<!-- BEGIN: MobileFooter -->
+<footer class="bg-[#0b0c0e] text-neutral-400 px-4 py-8 border-t border-brand-border text-xs">
+<div class="max-w-md mx-auto space-y-6">
+<!-- Logo and About -->
+<div class="flex flex-col gap-2 reveal reveal-active">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-brand-terracotta flex items-center justify-center text-white font-bold text-xs">H</div>
+<span class="font-condensed font-bold text-base text-white tracking-wider">HAVOC<span class="text-brand-terracotta">FIT</span></span>
+</div>
+<p class="text-[11px] text-neutral-400 leading-relaxed">
+          Studio de treino e condicionamento físico em São Paulo. Foco em atendimento individualizado, ambiente seguro, acolhedor e livre de filas.
+        </p>
+<div class="text-[11px] text-neutral-300 flex items-center gap-1.5 pt-1">
+<span>🏳️‍🌈</span>
+<span>Espaço com orgulho acolhedor e inclusivo LGBTQ+</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="grid grid-cols-2 gap-4 pt-2 border-t border-brand-border/60 text-[11px] reveal reveal-active">
+<div>
+<h5 class="text-white font-bold mb-2 uppercase text-[10px] tracking-wider">Navegação</h5>
+<ul class="space-y-1.5">
+<li><a class="hover:text-white transition" href="#">Início</a></li>
+<li><a class="hover:text-white transition" href="#">O Modelo Studio</a></li>
+<li><a class="hover:text-white transition" href="#">Planos e Valores</a></li>
+<li><a class="hover:text-white transition" href="#">Avaliações Google</a></li>
+<li><a class="hover:text-white transition" href="#">Localização</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-2 uppercase text-[10px] tracking-wider">Studio Havoc Fit</h5>
+<p class="text-neutral-400 leading-relaxed mb-2">
+            R. Delfino Facchina, 600 - Americanópolis, São Paulo - SP, 04409-080
+          </p>
+<p class="text-neutral-300 font-semibold mb-1">⏰ Seg a Sex a partir das 06:00</p>
+<p class="text-neutral-300">📞 (11) 95884-3199</p>
+</div>
+</div>
+<!-- Copyright -->
+<div class="pt-4 border-t border-brand-border/60 text-[10px] text-neutral-400 flex flex-col gap-1 text-center reveal reveal-active">
+<p>© 2025 Havoc Fit Studio. Todos os direitos reservados. Feito para inspirar consistência e saúde real.</p>
+<p>São Paulo • Brasil</p>
+</div>
+</div>
+</footer>
+<!-- END: MobileFooter -->
+</main>
+<!-- BEGIN: StickyMagneticWhatsAppCTA (Pílula Premium de Alta Conversão) -->
+<div class="fixed bottom-3 left-0 right-0 z-50 px-3 pointer-events-none" data-purpose="sticky-mobile-cta">
+<div class="max-w-md mx-auto pointer-events-auto">
+<!-- Outer Floating Glass Wrapper -->
+<div class="bg-[#121316]/95 backdrop-blur-xl border border-brand-terracotta/40 rounded-2xl p-2 shadow-2xl shadow-black/80 flex flex-col gap-1.5">
+<!-- Mini Incentive Status Bar -->
+<div class="flex items-center justify-between px-2 text-[10px]">
+<div class="flex items-center gap-1.5">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-bold text-emerald-400 tracking-wide">ONLINE AGORA</span>
+<span class="text-neutral-400 hidden xs:inline">• Resposta em poucos minutos</span>
+</div>
+<span class="text-neutral-400 font-medium text-[9px]">(11) 95884-3199</span>
+</div>
+<!-- Action Row -->
+<div class="flex items-center gap-2">
+<!-- Call Button -->
+<a aria-label="Ligar para o Studio Havoc Fit" class="ripple-target w-12 h-12 shrink-0 rounded-xl bg-brand-surface border border-brand-border hover:border-neutral-500 text-white flex items-center justify-center text-base shadow active:scale-90 transition-transform duration-150" href="tel:5511958843199">
+          📞
+        </a>
+<!-- Magnetic WhatsApp Main Pill -->
+<a class="ripple-target btn-shimmer-sweep flex-1 bg-gradient-to-r from-[#1eb954] via-[#25D366] to-[#128C7E] hover:brightness-105 text-white font-condensed tracking-wide text-base font-bold py-2.5 px-3.5 rounded-xl flex items-center justify-between shadow-lg shadow-emerald-950/60 active:scale-[0.97] transition-all duration-150 relative overflow-hidden" href="https://wa.me/5511958843199?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20na%20Havoc%20Fit">
+<div class="flex items-center gap-2.5">
+<!-- Wiggle Icon with Continuous Double Radar Ripple -->
+<div class="relative w-7 h-7 flex items-center justify-center">
+<span class="radar-ring absolute inset-0 rounded-full bg-white/40 pointer-events-none"></span>
+<span class="radar-ring-delayed absolute inset-0 rounded-full bg-emerald-300/40 pointer-events-none"></span>
+<span class="wa-wiggle relative z-10 text-xl leading-none">💬</span>
+</div>
+<div class="flex flex-col text-left leading-tight">
+<span class="text-[15px] font-black uppercase tracking-wider text-white flex items-center gap-1">
+                FALAR NO WHATSAPP
+              </span>
+<span class="text-[9px] font-sans text-emerald-100 font-medium tracking-normal -mt-0.5">
+                Agende sua aula experimental gratuita
+              </span>
+</div>
+</div>
+<!-- Pulsing Arrow Badge -->
+<div class="bg-black/20 backdrop-blur-sm rounded-lg w-7 h-7 flex items-center justify-center shrink-0 border border-white/20">
+<svg class="w-4 h-4 text-white transform transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- END: StickyMagneticWhatsAppCTA -->
+<!-- Interactive Scripts -->
+<script data-purpose="event-handlers">
+  // Smooth scrolling adjustment for anchors
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+
+  // Tactile Ripple on Click/Tap
+  document.querySelectorAll('.ripple-target').forEach(btn => {
+    btn.addEventListener('pointerdown', function(e) {
+      const rect = this.getBoundingClientRect();
+      const circle = document.createElement('span');
+      const diameter = Math.max(rect.width, rect.height);
+      const radius = diameter / 2;
+
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${e.clientX - rect.left - radius}px`;
+      circle.style.top = `${e.clientY - rect.top - radius}px`;
+      circle.classList.add('ripple-circle');
+
+      const existingRipple = this.querySelector('.ripple-circle');
+      if (existingRipple) {
+        existingRipple.remove();
+      }
+
+      this.appendChild(circle);
+
+      setTimeout(() => {
+        circle.remove();
+      }, 600);
+    });
+  });
+
+  // Progressive Counter Animation for metrics
+  function animateCounters() {
+    const counters = document.querySelectorAll('.counter-val');
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target'));
+      const decimals = parseInt(counter.getAttribute('data-decimals') || '0', 10);
+      const duration = 1600;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Easing: easeOutExpo
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const currentVal = ease * target;
+        
+        counter.textContent = currentVal.toFixed(decimals);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target.toFixed(decimals);
+        }
+      }
+      requestAnimationFrame(update);
+    });
+  }
+
+  // Native Mobile Scroll Reveal & Counter Observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealElements = document.querySelectorAll('.reveal, .reveal-scale');
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealElements.forEach(el => el.classList.add('reveal-active'));
+      const counters = document.querySelectorAll('.counter-val');
+      counters.forEach(c => {
+        c.textContent = c.getAttribute('data-target');
+      });
+      return;
+    }
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -25px 0px',
+      threshold: 0.1
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Observer specifically for triggering animated counter
+    const metricsSection = document.getElementById('metrics-counter-section');
+    if (metricsSection) {
+      let animated = false;
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            animateCounters();
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      counterObserver.observe(metricsSection);
+    }
+
+    // Dynamic Header Scroll Shrink Effect
+    const headerContainer = document.getElementById('header-container');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        headerContainer.classList.add('py-1.5', 'scale-[0.98]', 'bg-[#181a20]/95');
+        headerContainer.classList.remove('py-2');
+      } else {
+        headerContainer.classList.remove('py-1.5', 'scale-[0.98]', 'bg-[#181a20]/95');
+        headerContainer.classList.add('py-2');
+      }
+    }, { passive: true });
+  });
+</script>
+</body></html>

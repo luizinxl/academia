@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Tokens — derivados de DESIGN.md (Havoc Studio Rhythm) */
+@theme {
+  --color-ink: #15140c;
+  --color-ink-low: #1d1c14;
+  --color-ink-mid: #212017;
+  --color-ink-high: #2c2a21;
+  --color-charcoal: #262525;
+  --color-flame: #D95D37;
+  --color-ember: #E87C5A;
+  --color-cream: #FDF8EA;
+  --color-cream-muted: #F4EDD6;
+  --color-sand: #e7e2d5;
+  --color-dust: #a79f93;
+  --color-line: #3a372d;
+
+  --font-display: "Anton", Impact, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: 0.5rem;
+  --radius-card: 1rem;
+  --radius-focal: 1.5rem;
+
+  --shadow-offset: 4px 4px 0 #D95D37;
+  --shadow-offset-dark: 4px 4px 0 #262525;
+  --shadow-glow: 0 8px 24px rgba(217, 93, 55, 0.15);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--color-ink);
+  color: var(--color-sand);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+::selection { background: var(--color-flame); color: #fff; }
+
+/* Botão magnético com fundo deslizante */
+.btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  padding: .95rem 1.6rem; border-radius: var(--radius-sm);
+  font-weight: 700; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+  transition: transform .35s cubic-bezier(0.25, 0.46, 0.45, 0.94), color .35s;
+}
+.btn:hover { transform: scale(1.03); }
+.btn:active { transform: scale(.98); }
+.btn:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--color-ember); outline-offset: 3px; }
+.btn > .slide {
+  position: absolute; inset: 0; z-index: -1; transform: translateY(101%);
+  transition: transform .45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.btn:hover > .slide { transform: translateY(0); }
+.btn-primary { background: var(--color-flame); color: #fff; }
+.btn-primary > .slide { background: var(--color-ember); }
+.btn-ghost { border: 1.5px solid rgba(253,248,234,.35); color: var(--color-cream); }
+.btn-ghost > .slide { background: var(--color-cream); }
+.btn-ghost:hover { color: var(--color-charcoal); }
+
+.lift { transition: transform .25s, color .25s; }
+.lift:hover { transform: translateY(-1px); color: var(--color-ember); }
+
+.text-stroke { -webkit-text-stroke: 1.5px rgba(217, 93, 55, .35); color: transparent; }
+
+.grain::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+.caret { animation: blink 1s steps(1) infinite; }
+@keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(217,93,55,.6); } 70% { box-shadow: 0 0 0 8px rgba(217,93,55,0); } }
+.pulse { animation: pulse-dot 1.8s infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 28s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
+
+/* ===== Animações temáticas ===== */
+@keyframes beat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.3); } 30% { transform: scale(1); } 45% { transform: scale(1.2); } }
+.beat { animation: beat 1.1s ease-in-out infinite; transform-origin: center; }
+
+@keyframes grow { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+.grow-bar { transform-origin: bottom; animation: grow 1.6s ease-in-out infinite; }
+
+@keyframes fill-loop { 0% { transform: scaleX(0); } 60%,100% { transform: scaleX(1); } }
+.fill-loop { animation: fill-loop 2.8s cubic-bezier(.25,.46,.45,.94) infinite; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin-slow { animation: spin 40s linear infinite; }
+
+@keyframes scroll-dot { 0% { transform: translate(-50%, 0); opacity: 1; } 80% { transform: translate(-50%, 12px); opacity: 0; } 100% { opacity: 0; } }
+.scroll-dot > span { animation: scroll-dot 1.6s ease-in-out infinite; }
+
+@keyframes shine { to { transform: translateX(250%) skewX(-20deg); } }
+.shine::after { content: ""; position: absolute; inset: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent); transform: translateX(-150%) skewX(-20deg); animation: shine 2.6s ease-in-out infinite; }
+
+@keyframes wa-ping { 0% { box-shadow: 0 0 0 0 rgba(217,93,55,.55); } 100% { box-shadow: 0 0 0 18px rgba(217,93,55,0); } }
+.float-wa { animation: wa-ping 1.8s infinite; }
+
+.spot { position: relative; transform-style: preserve-3d; will-change: transform; }
+.spot::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(232,124,90,.14), transparent 60%); }
+.spot:hover::before { opacity: 1; }
+
+/* ===== Monitor cardíaco (BPM) ===== */
+@keyframes ekg-run { from { stroke-dashoffset: 1.12; } to { stroke-dashoffset: -0.12; } }
+.ekg-head  { stroke-dasharray: .06 1.2; animation: ekg-run 1.8s linear infinite; }
+@keyframes ekg-trail { from { stroke-dashoffset: 1.34; } to { stroke-dashoffset: 0.10; } }
+.ekg-trail { stroke-dasharray: .28 1.2; animation: ekg-trail 1.8s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .ekg-head, .ekg-trail { animation: none; stroke-dasharray: none; } }
